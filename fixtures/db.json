@@ -60,21 +60,6 @@
     "fields": { "url": "https://api.multiavatar.com/apple.png" }
   },
   {
-    "model": "users.avatar",
-    "pk": 13,
-    "fields": { "url": "https://api.multiavatar.com/rr.png" }
-  },
-  {
-    "model": "users.avatar",
-    "pk": 14,
-    "fields": { "url": "https://api.multiavatar.com/book.png" }
-  },
-  {
-    "model": "users.avatar",
-    "pk": 15,
-    "fields": { "url": "https://api.multiavatar.com/zez.png" }
-  },
-  {
     "model": "users.user",
     "pk": 1,
     "fields": {
