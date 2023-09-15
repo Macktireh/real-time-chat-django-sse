@@ -24,7 +24,6 @@ class GroupAdmin(BaseGroupAdmin):
 class UserAdmin(BaseUserAdmin):
     list_display = (
         "email",
-        "publicId",
         "name",
         "avatar",
         "avatar_preview",
