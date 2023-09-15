@@ -12,10 +12,10 @@ load = load_dotenv(BASE_DIR / ".env")
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-b1$-3$a(@q)h@xk9-b#%#%bbwie63)5$jj@nk*xi0_p=q%yht)"
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get("DEBUG", "True") != "False"
 
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "127.0.0.1 localhost").split(" ")
 
@@ -184,23 +184,4 @@ SOCIALACCOUNT_PROVIDERS = {
         },
         "OAUTH_PKCE_ENABLED": True,
     },
-    # "facebook": {
-    #     "METHOD": "oauth2",
-    #     "SDK_URL": "//connect.facebook.net/{locale}/sdk.js",
-    #     "SCOPE": ["email", "public_profile"],
-    #     "AUTH_PARAMS": {"auth_type": "reauthenticate"},
-    #     "INIT_PARAMS": {"cookie": True},
-    #     "FIELDS": [
-    #         "id",
-    #         "first_name",
-    #         "last_name",
-    #         "middle_name",
-    #         "name",
-    #     ],
-    #     "EXCHANGE_TOKEN": True,
-    #     "LOCALE_FUNC": lambda request: "fr",
-    #     "VERIFIED_EMAIL": False,
-    #     "VERSION": "v13.0",
-    #     "GRAPH_API_URL": "https://graph.facebook.com/v13.0",
-    # },
 }
