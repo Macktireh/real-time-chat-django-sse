@@ -1,0 +1,629 @@
+[
+  {
+    "model": "users.avatar",
+    "pk": 1,
+    "fields": { "url": "https://api.multiavatar.com/ccc.png" }
+  },
+  {
+    "model": "users.avatar",
+    "pk": 2,
+    "fields": { "url": "https://api.multiavatar.com/alex.png" }
+  },
+  {
+    "model": "users.avatar",
+    "pk": 3,
+    "fields": { "url": "https://api.multiavatar.com/aa.png" }
+  },
+  {
+    "model": "users.avatar",
+    "pk": 4,
+    "fields": { "url": "https://api.multiavatar.com/ww.png" }
+  },
+  {
+    "model": "users.avatar",
+    "pk": 5,
+    "fields": { "url": "https://api.multiavatar.com/uu.png" }
+  },
+  {
+    "model": "users.avatar",
+    "pk": 6,
+    "fields": { "url": "https://api.multiavatar.com/zer.png" }
+  },
+  {
+    "model": "users.avatar",
+    "pk": 7,
+    "fields": { "url": "https://api.multiavatar.com/sr.png" }
+  },
+  {
+    "model": "users.avatar",
+    "pk": 8,
+    "fields": { "url": "https://api.multiavatar.com/dsbgnfy;uhol;u.png" }
+  },
+  {
+    "model": "users.avatar",
+    "pk": 9,
+    "fields": { "url": "https://api.multiavatar.com/nnn.png" }
+  },
+  {
+    "model": "users.avatar",
+    "pk": 10,
+    "fields": { "url": "https://api.multiavatar.com/asx.png" }
+  },
+  {
+    "model": "users.avatar",
+    "pk": 11,
+    "fields": { "url": "https://api.multiavatar.com/fb.png" }
+  },
+  {
+    "model": "users.avatar",
+    "pk": 12,
+    "fields": { "url": "https://api.multiavatar.com/apple.png" }
+  },
+  {
+    "model": "users.avatar",
+    "pk": 13,
+    "fields": { "url": "https://api.multiavatar.com/rr.png" }
+  },
+  {
+    "model": "users.avatar",
+    "pk": 14,
+    "fields": { "url": "https://api.multiavatar.com/book.png" }
+  },
+  {
+    "model": "users.avatar",
+    "pk": 15,
+    "fields": { "url": "https://api.multiavatar.com/zez.png" }
+  },
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$R9znyM4kVNwt72yySgD3Z6$X+axok98Iidd4TQREoxL+F8tmV6fLQFVMswea5nOHxs=",
+      "last_login": "2023-09-15T15:33:38.717Z",
+      "is_superuser": true,
+      "first_name": "Jack",
+      "last_name": "AS",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-09-13T21:34:08.610Z",
+      "publicId": "eb639c7f-acc2-409d-9d50-548f62cbeebe",
+      "email": "admin@gmail.com",
+      "avatar": 1,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$J8j5NdlxGAhjDtEw03EjpQ$9K6ni0cYdLPoFRUBRshVcADO+vLtZpdI4JeaDioxUxA=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "John",
+      "last_name": "Doe",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-09-13T21:38:56.155Z",
+      "publicId": "3a1df96a-2b7c-47f7-8499-2532ab32a33a",
+      "email": "john.doe@gmail.com",
+      "avatar": 4,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$3HmkaRALu5urA880qQ8MvQ$yabYT2hRul3L7VZ1Ak33N3N8z83Ho/iASTF1WR55I/8=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "Leanne",
+      "last_name": "Graham",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-09-13T21:45:00.267Z",
+      "publicId": "efbeb8a5-4830-456a-b83a-a2883ce4add2",
+      "email": "leanne-graham@gmail.com",
+      "avatar": 6,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$YO1CJgdoyTejhQwS1R7kNO$d4bKWqv4GPZ8JgV+aMc34SOY3JGdBolq5TgTpy5I93E=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "Ervin",
+      "last_name": "Howell",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-09-13T21:45:49.376Z",
+      "publicId": "5f5f2ea7-29f8-4d7c-8380-d0a3bc792a40",
+      "email": "ervin.howell@gmail.com",
+      "avatar": 5,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$3lGqjQSErKiygapzIgAieX$I4xNy4ACdpplA5NLcMklJrZwUkUCRtihsPWV1Rva6dE=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "Clementine",
+      "last_name": "Bauch",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-09-13T21:46:41.786Z",
+      "publicId": "e0e5e008-9977-4f28-986b-b08b887d8db3",
+      "email": "clementine.bauch@gmail.com",
+      "avatar": 3,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$co3I3XGewJD1Stxbhv3jSi$lRVMwdaTxVsjYvPampnn4rCK9YLvU4wF57644pH2Mms=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "Patricia",
+      "last_name": "Lebsack",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-09-13T21:47:29.166Z",
+      "publicId": "ed86767e-97e6-449b-b72e-24f3ac85d399",
+      "email": "patricia.lebsack@gmail.com",
+      "avatar": 9,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "chat.room",
+    "pk": 1,
+    "fields": {
+      "name": "Friends' Hangout",
+      "slug": "friends-hangout",
+      "icon": "users"
+    }
+  },
+  {
+    "model": "chat.room",
+    "pk": 2,
+    "fields": {
+      "name": "Virtual Cafe",
+      "slug": "virtual-cafe",
+      "icon": "mug-saucer"
+    }
+  },
+  {
+    "model": "chat.room",
+    "pk": 3,
+    "fields": {
+      "name": "Discussion Corner",
+      "slug": "discussion-corner",
+      "icon": "message"
+    }
+  },
+  {
+    "model": "chat.room",
+    "pk": 4,
+    "fields": {
+      "name": "Idea Exchange",
+      "slug": "idea-exchange",
+      "icon": "lightbulb"
+    }
+  },
+  {
+    "model": "chat.room",
+    "pk": 5,
+    "fields": {
+      "name": "Digital Tavern",
+      "slug": "digital-tavern",
+      "icon": "code"
+    }
+  },
+  {
+    "model": "chat.room",
+    "pk": 6,
+    "fields": {
+      "name": "Online Conference Room",
+      "slug": "online-conference-room",
+      "icon": "globe"
+    }
+  },
+  {
+    "model": "chat.room",
+    "pk": 7,
+    "fields": {
+      "name": "Fitness Fanatics",
+      "slug": "fitness-fanatics",
+      "icon": "heart"
+    }
+  },
+  {
+    "model": "chat.room",
+    "pk": 8,
+    "fields": {
+      "name": "Music Lovers Lounge",
+      "slug": "music-lovers-lounge",
+      "icon": "music"
+    }
+  },
+  {
+    "model": "chat.room",
+    "pk": 9,
+    "fields": {
+      "name": "Gaming Hangout",
+      "slug": "gaming-hangout",
+      "icon": "gamepad"
+    }
+  },
+  {
+    "model": "chat.room",
+    "pk": 10,
+    "fields": {
+      "name": "Travel Enthusiasts",
+      "slug": "travel-enthusiasts",
+      "icon": "plane"
+    }
+  },
+  {
+    "model": "chat.room",
+    "pk": 11,
+    "fields": {
+      "name": "Cooking & Recipes",
+      "slug": "cooking-recipes",
+      "icon": "utensils"
+    }
+  },
+  {
+    "model": "chat.room",
+    "pk": 12,
+    "fields": {
+      "name": "Pet Owners' Chat",
+      "slug": "pet-owners-chat",
+      "icon": "dog"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "room": 1,
+      "text": "Hey, how's everyone doing today?",
+      "created": "2023-09-13T21:50:59.833Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "room": 1,
+      "text": "I had a great weekend!",
+      "created": "2023-09-13T21:51:12.333Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 3,
+    "fields": {
+      "user": 4,
+      "room": 1,
+      "text": "I need Netflix recommendations. Any ideas?",
+      "created": "2023-09-13T21:51:24.183Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 4,
+    "fields": {
+      "user": 5,
+      "room": 2,
+      "text": "Grab a virtual coffee and let's chat!",
+      "created": "2023-09-13T21:51:42.111Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 5,
+    "fields": {
+      "user": 1,
+      "room": 2,
+      "text": "I'm working on a new project. Any design suggestions?",
+      "created": "2023-09-13T21:52:29.369Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 6,
+    "fields": {
+      "user": 6,
+      "room": 2,
+      "text": "Just tried a new coffee blend. It's amazing!",
+      "created": "2023-09-13T21:52:44.148Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 7,
+    "fields": {
+      "user": 5,
+      "room": 3,
+      "text": "Let's talk about the latest tech trends.",
+      "created": "2023-09-13T21:52:57.443Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 8,
+    "fields": {
+      "user": 2,
+      "room": 3,
+      "text": "Did anyone catch the game last night?",
+      "created": "2023-09-13T21:54:31.968Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 9,
+    "fields": {
+      "user": 3,
+      "room": 3,
+      "text": "I have a question about coding. Can someone help?",
+      "created": "2023-09-13T21:54:42.699Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 10,
+    "fields": {
+      "user": 5,
+      "room": 4,
+      "text": "I have a business idea. What do you think?",
+      "created": "2023-09-13T21:58:37.135Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 11,
+    "fields": {
+      "user": 1,
+      "room": 4,
+      "text": "Share it! We'll brainstorm together.",
+      "created": "2023-09-13T21:58:48.147Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 22,
+    "fields": {
+      "user": 3,
+      "room": 12,
+      "text": "Who's up for a multiplayer game tonight?",
+      "created": "2023-09-15T20:33:24.722Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 23,
+    "fields": {
+      "user": 2,
+      "room": 12,
+      "text": "Let's form a squad and dominate!",
+      "created": "2023-09-15T20:33:36.342Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 24,
+    "fields": {
+      "user": 4,
+      "room": 12,
+      "text": "Discussing game strategies and updates.",
+      "created": "2023-09-15T20:33:52.984Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 25,
+    "fields": {
+      "user": 1,
+      "room": 11,
+      "text": "Planning a trip to Europe. Any recommendations?",
+      "created": "2023-09-15T20:34:06.252Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 26,
+    "fields": {
+      "user": 6,
+      "room": 11,
+      "text": "The food in Italy is a must-try!",
+      "created": "2023-09-15T20:34:15.938Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 27,
+    "fields": {
+      "user": 5,
+      "room": 11,
+      "text": "Sharing travel stories and tips.",
+      "created": "2023-09-15T20:34:24.701Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 28,
+    "fields": {
+      "user": 6,
+      "room": 7,
+      "text": "Completed a 10-mile run today. Feeling accomplished!",
+      "created": "2023-09-15T20:34:45.769Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 29,
+    "fields": {
+      "user": 3,
+      "room": 7,
+      "text": "Share your workout routines and goals.",
+      "created": "2023-09-15T20:35:04.925Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 30,
+    "fields": {
+      "user": 5,
+      "room": 7,
+      "text": "Motivating each other to stay fit.",
+      "created": "2023-09-15T20:35:16.764Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 31,
+    "fields": {
+      "user": 2,
+      "room": 10,
+      "text": "Tried a new recipe today. It's a game-changer!",
+      "created": "2023-09-15T20:35:37.400Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 32,
+    "fields": {
+      "user": 1,
+      "room": 10,
+      "text": "What's the secret ingredient?",
+      "created": "2023-09-15T20:35:45.850Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 33,
+    "fields": {
+      "user": 3,
+      "room": 10,
+      "text": "Sharing cooking tips and culinary adventures.",
+      "created": "2023-09-15T20:35:58.734Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 34,
+    "fields": {
+      "user": 4,
+      "room": 8,
+      "text": "I discovered a fantastic indie band. Check them out!",
+      "created": "2023-09-15T20:36:25.725Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 35,
+    "fields": {
+      "user": 6,
+      "room": 8,
+      "text": "Let's create a playlist together.",
+      "created": "2023-09-15T20:36:37.898Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 36,
+    "fields": {
+      "user": 4,
+      "room": 8,
+      "text": "Sharing music recommendations and concert experiences.",
+      "created": "2023-09-15T20:36:55.631Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 37,
+    "fields": {
+      "user": 5,
+      "room": 9,
+      "text": "Meet my new puppy, Bella!",
+      "created": "2023-09-15T20:37:55.102Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 38,
+    "fields": {
+      "user": 1,
+      "room": 9,
+      "text": "Cats rule! Here's a pic of my feline friend.",
+      "created": "2023-09-15T20:38:06.621Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 39,
+    "fields": {
+      "user": 6,
+      "room": 9,
+      "text": "Discussing pet care and training tips.",
+      "created": "2023-09-15T20:38:20.004Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 40,
+    "fields": {
+      "user": 3,
+      "room": 5,
+      "text": "Cheers to the weekend!",
+      "created": "2023-09-15T20:39:18.387Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 41,
+    "fields": {
+      "user": 2,
+      "room": 5,
+      "text": "Anyone up for a virtual game night?",
+      "created": "2023-09-15T20:39:31.810Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 42,
+    "fields": {
+      "user": 6,
+      "room": 5,
+      "text": "I'll bring the snacks!",
+      "created": "2023-09-15T20:39:42.686Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 44,
+    "fields": {
+      "user": 1,
+      "room": 5,
+      "text": "sdcsd",
+      "created": "2023-09-15T20:46:30.068Z"
+    }
+  }
+]

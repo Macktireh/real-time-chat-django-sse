@@ -1,9 +1,8 @@
 import json
 from collections.abc import AsyncGenerator
-from django.views import View
 
 import psycopg
-from django.contrib.auth.decorators import login_required
+from asgiref.sync import sync_to_async
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db import connection
 from django.http import (
@@ -13,6 +12,7 @@ from django.http import (
     StreamingHttpResponse,
 )
 from django.shortcuts import get_object_or_404, render
+from django.views import View
 
 from apps.chat.models import ChatMessage, Room
 from apps.chat.utils import sse_message, notify
@@ -58,10 +58,6 @@ class ChatMessageView(LoginRequiredMixin, View):
 
 async def stream_messages(last_id: int | None = None) -> AsyncGenerator[str, None]:
     connection_params = connection.get_connection_params()
-
-    # Remove the cursor_factory parameter since I can't get
-    # the default from Django 4.2.1 to work.
-    # Django 4.2 didn't have the parameter and that worked.
     connection_params.pop("cursor_factory")
 
     aconnection = await psycopg.AsyncConnection.connect(
@@ -70,21 +66,13 @@ async def stream_messages(last_id: int | None = None) -> AsyncGenerator[str, Non
     )
     channel_name = "lobby"
 
-    # Uncomment the following to generate random message to
-    # test that we are streaming messages that are created
-    # while the client is disconnected.
-
-    # await ChatMessage.objects.acreate(
-    #     user="system",
-    #     text="randomly generated", room=channel_name)
-
     if last_id:
         messages = ChatMessage.objects.filter(id__gt=last_id)
         async for message in messages:
             yield sse_message(
                 event="message_created",
                 event_id=message.id,
-                data=message.as_json(),
+                data=sync_to_async(message.as_json)(),
             )
 
     async with aconnection.cursor() as acursor:

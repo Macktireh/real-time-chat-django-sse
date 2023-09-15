@@ -1,6 +1,6 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import logout
-from django.http import HttpRequest, HttpResponse
+from django.http import HttpRequest, HttpResponse, HttpResponsePermanentRedirect, HttpResponseRedirect
 from django.shortcuts import redirect, render
 from django.views import View
 
@@ -15,13 +15,13 @@ class LoginView(View):
 
 
 class LogoutView(View):
-    def get(self, request: HttpRequest) -> HttpResponse:
+    def get(self, request: HttpRequest) -> HttpResponseRedirect | HttpResponsePermanentRedirect:
         logout(request)
         return redirect("chat:index")
 
 
 class UpdateAvatarView(LoginRequiredMixin, View):
-    def post(self, request: HttpRequest) -> HttpResponse:
+    def post(self, request: HttpRequest) -> HttpResponseRedirect | HttpResponsePermanentRedirect:
         avatar_id = int(request.POST.get("avatar"))
         avatar = Avatar.objects.get(pk=avatar_id)
         request.user.avatar = avatar
