@@ -1,4 +1,4 @@
-from typing import cast
+from typing import Union, cast
 
 from django.contrib import admin
 from django.contrib.auth.models import Group
@@ -114,7 +114,7 @@ class UserAdmin(BaseUserAdmin):
     list_per_page = 20
 
     def has_view_permission(
-        self, request: HttpRequest, obj: User | None = None
+        self, request: HttpRequest, obj: Union[User, None] = None
     ) -> bool:
         return cast(User, request.user).is_superuser
 
@@ -122,12 +122,12 @@ class UserAdmin(BaseUserAdmin):
         return cast(User, request.user).is_superuser
 
     def has_change_permission(
-        self, request: HttpRequest, obj: User | None = None
+        self, request: HttpRequest, obj: Union[User, None] = None
     ) -> bool:
         return cast(User, request.user).is_superuser
 
     def has_delete_permission(
-        self, request: HttpRequest, obj: User | None = None
+        self, request: HttpRequest, obj: Union[User, None] = None
     ) -> bool:
         return cast(User, request.user).is_superuser
 
