@@ -12,9 +12,6 @@ source.addEventListener("message_created", function(evt) {
   let payload = JSON.parse(evt.data);
   let user = JSON.parse(payload.user);
 
-  console.log(payload);
-  console.log(roomURL.split("/")[2]);
-
   const templateChat = `
     <div class="mb-4 rounded-md p-4 ${user.publicId === userPublicID ? "bg-blue-200" : "bg-gray-200"} flex flex-col">
       <div class="flex items-center mb-2 gap-4">
@@ -49,10 +46,7 @@ function handleSubmit(event) {
     window.alert("Please enter a message");
   }
   formData.append("message", message.value);
-
-  console.log(formData.get("message"));
   const csrftoken = getCookie("csrftoken");
-
   const request = new Request(roomURL, {
     method: "POST",
     headers: {
