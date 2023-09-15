@@ -13,3 +13,4 @@ class RoomAdmin(admin.ModelAdmin):
 @admin.register(ChatMessage)
 class ChatMessageAdmin(admin.ModelAdmin):
     list_display = ["user", "text", "room", "created"]
+    list_editable = ["text", "room"]

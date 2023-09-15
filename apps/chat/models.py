@@ -1,5 +1,5 @@
 import json
-from typing import Any, Dict
+from typing import Any, Dict, Tuple
 
 from django.contrib.humanize.templatetags.humanize import naturaltime
 from django.db import models
@@ -13,10 +13,13 @@ class Room(models.Model):
     slug = models.SlugField(max_length=255, unique=True)
     icon = models.CharField(max_length=255, blank=True, null=True)
 
+    class Meta:
+        db_table = "rooms"
+
     def __str__(self) -> str:
         return self.name
 
-    def save(self, *args: Any, **kwargs: Dict[str, Any]) -> None:
+    def save(self, *args: Tuple[Any, ...], **kwargs: Dict[str, Any]) -> None:
         if not self.slug:
             self.slug = slugify(self.name)
         super().save(*args, **kwargs)
@@ -27,6 +30,9 @@ class ChatMessage(models.Model):
     room = models.ForeignKey(Room, on_delete=models.CASCADE, related_name="messages")
     text = models.CharField(max_length=255)
     created = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table = "messages"
 
     def __str__(self) -> str:
         if len(self.text) > 10:
