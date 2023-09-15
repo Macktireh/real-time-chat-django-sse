@@ -1,0 +1,7 @@
+daphne
+Django
+django-allauth
+Pillow
+psycopg
+psycopg-binary
+python-dotenv
