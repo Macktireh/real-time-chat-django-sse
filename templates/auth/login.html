@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load socialaccount %}
+
+
+{% block content %}
+
+<div class="flex items-center justify-center h-screen w-screen bg-gray-100">
+  <div class="bg-gray-200 flex flex-col justify-center items-center gap-4 p-4 rounded-lg " style="width: 400px;">
+    <img src="https://raw.githubusercontent.com/Macktireh/Media/main/images/chatApp.png" alt="" width="200">
+    <h1 class="text-2xl font-semibold mb-2 text-center">Welcome to ChatApp, please login to continue</h1>
+    <form action="" method="post" class="w-full px-4 mt-4">
+      {% csrf_token %}
+      <button type="submit" class="flex justify-center items-center gap-4 h-12 w-full ease-in-out bg-blue-300 hover:bg-blue-500 hover:text-white p-2 rounded-lg">
+        <img class="ml" src="https://mack-twitter.pages.dev/static/svg/google.svg" alt="Compte google" width="25"
+          height="25">
+        <span>Continue with Google</span>
+      </button>
+    </form>
+
+    <form action="{% provider_login_url 'github' %}" method="post" class="w-full px-4 mb-4">
+      {% csrf_token %}
+      <button type="submit" class="flex justify-center items-center gap-4 h-12 w-full ease-in-out bg-blue-300 hover:bg-blue-500 hover:text-white p-2 rounded-lg">
+        <img class="ml"
+          src="https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/github/github-original.svg"
+          alt="Compte github"  width="25" height="25">
+        <span>Continue with GitHub</span>
+      </button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
