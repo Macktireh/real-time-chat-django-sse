@@ -1,0 +1,27 @@
+<div class="bg-blue-500 text-white h-screen w-1/4 flex flex-col justify-between" style="min-width: 280px;">
+  <div class="flex flex-col p-4 overflow-y-auto">
+    <a href="{% url 'chat:index' %}">
+      <h1 class="text-2xl font-semibold mb-6">Chat Rooms</h1>
+    </a>
+    <ul>
+      {% for room in rooms %}
+      <li class="mb-4">
+        <a href="{% url 'chat:room' room.slug %}"
+          class="flex items-center {% if room == cuurent_room %}bg-red-200 text-black{% endif %} hover:bg-gray-300 hover:text-black p-2 rounded"
+          title="{{ room.name }}">
+          <i class="fas fa-{{ room.icon }} mr-4"></i>
+          {{ room.name }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="flex items-center justify-between mb-2 p-4">
+    <div class="flex items-center gap-4">
+      <img src="{{ request.user.avatar.url }}" alt="{{ request.user.name }}" width="40" height="40"
+        style="border-radius: 50%;">
+      <strong>{{ request.user.name }}</strong>
+    </div>
+    <a href="{% url 'users:logout' %}" class="bg-blue-500 text-white"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+  </div>
+</div>

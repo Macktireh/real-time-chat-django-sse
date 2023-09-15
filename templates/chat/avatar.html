@@ -1,0 +1,26 @@
+{% if not request.user.avatar %}
+<style>
+  input[type="radio"]:checked + label {
+    background-color: #3B82F6;
+  }
+</style>
+<div class="flex items-center justify-center h-screen w-screen bg-gray-100 absolute z-10">
+  <form action="{% url 'users:update_avatar' %}" method="post" class="w-3/4 h-3/4 flex flex-col gap-4 justify-center items-center  rounded-lg">
+    {% csrf_token %}
+    <h1 class="text-2xl font-semibold mb-6 text-center">Select a avatar</h1>
+    <div class="grid grid-cols-3 gap-10 p-4">
+      {% for avatar in avatars %}
+      <input id="avatar-{{ avatar.id }}" type="radio" name="avatar" value="{{ avatar.id }}" 
+      {% if forloop.counter == 1 %}checked="checked"{% endif %} class="hidden">
+      <label for="avatar-{{ avatar.id }}"
+        class="flex justify-center items-center p-3 rounded-full  hover:bg-blue-300 cursor-pointer">
+        <img src="{{ avatar.url }}" width="60" height="60" style="border-radius: 50%;">
+      </label>
+      {% endfor %}
+    </div>
+    <div class="flex justify-center items-center gap-4 w-80 mt-4">
+      <button class="bg-blue-500 text-white px-4 py-2 rounded-md w-1/2">Apply</button>
+    </div>
+  </form>
+</div>
+{% endif %}

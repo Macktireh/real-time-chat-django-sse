@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+
+
+{% block content %}
+{% include 'chat/sidebar.html' %}
+{% include 'chat/avatar.html' %}
+
+<!-- Main Content (Chat) -->
+<div class="w-3/4">
+  <div class="bg-white rounded-lg shadow-md h-screen">
+    <div class="p-4 border-b border-gray-200">
+      <h2 class="text-xl font-semibold">{{ cuurent_room }}</h2>
+    </div>
+    <div class="p-4 h-40 overflow-y-auto" style="height: 80%;" id="messages-container">
+      {% for message in messages %}
+        <div class="mb-4 rounded-md p-2 {% if message.user == request.user %}bg-blue-200{% else %}bg-gray-200{% endif %} flex flex-col">
+          <div class="flex items-center mb-2 gap-4">
+            <img src="{{ message.user.avatar.url }}" alt="avatar {{ message.user.name }}" width="40" height="40" style="border-radius: 50%;">
+            <strong>{{ message.user.name }}</strong>
+          </div>
+          <p>{{ message.text }}</p>
+          <small class="text-right text-gray-500 mt-2">{{ message.created|naturaltime }}</small>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="p-4">
+      <form class="flex" action="{% url 'chat:room' cuurent_room.slug %}" method="POST" id="new-message-form">
+        {% csrf_token %}
+        <input type="hidden" value="{% url 'chat:stream-messages' %}" id="streamURL">
+        <input type="hidden" value="{% url 'chat:room' cuurent_room.slug %}" id="roomURL">
+        <input type="text" class="w-full border rounded-md p-2 mr-2" placeholder="Type your message..." id="new-message" required>
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md">Send</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block js %}
+<input type="hidden" value="{{ request.user.publicId }}" id="userPublicID">
+<script src="{% static 'js/chat.js' %}"></script>
+{% endblock %}
