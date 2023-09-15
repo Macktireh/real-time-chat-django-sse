@@ -1,5 +1,6 @@
 import json
 from collections.abc import AsyncGenerator
+from typing import Union
 
 import psycopg
 from asgiref.sync import sync_to_async
@@ -56,7 +57,7 @@ class ChatMessageView(LoginRequiredMixin, View):
         return HttpResponse("OK")
 
 
-async def stream_messages(last_id: int | None = None) -> AsyncGenerator[str, None]:
+async def stream_messages(last_id: Union[int, None] = None) -> AsyncGenerator[str, None]:
     connection_params = connection.get_connection_params()
     connection_params.pop("cursor_factory")
 
