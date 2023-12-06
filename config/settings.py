@@ -8,17 +8,20 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 load = load_dotenv(BASE_DIR / ".env")
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
+ENV = os.environ.get("ENV", "develop")
 
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG", "True") != "False"
+DEBUG = ENV == "develop"
+
+print()
+print("ENV", ENV)
+print("DEBUG", DEBUG)
+print()
 
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "127.0.0.1 localhost").split(" ")
 
+CSRF_TRUSTED_ORIGINS = os.environ.get("CSRF_TRUSTED_ORIGINS", "").split(" ")
 
 # Application definition
 

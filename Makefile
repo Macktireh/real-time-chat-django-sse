@@ -30,7 +30,7 @@ superuser:
 	python manage.py createsuperuser --email=admin@gmail.com --name="Mack AS"
 
 loaddata:
-	python manage.py load_data
+	python manage.py loaddata fixtures/db.json
 
 i18n:
 	django-admin makemessages --all --ignore=env
