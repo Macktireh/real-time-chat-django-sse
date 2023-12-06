@@ -1,8 +1,8 @@
-daphne
-Django
-django-allauth
-Pillow
-psycopg
-psycopg-binary
-python-dotenv
-whitenoise
+daphne==4.0.0
+Django==5.0
+django-allauth==0.58.2
+Pillow==10.1.0
+psycopg==3.1.14
+psycopg-binary==3.1.14
+python-dotenv==1.0.0
+whitenoise==6.6.0
